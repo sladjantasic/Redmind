@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedmindATM", "redmind\RedmindATM.csproj", "{406027D9-5E67-4950-861E-1F114E2BD466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedmindATM.Tests", "RedmindATM.Tests\RedmindATM.Tests.csproj", "{5A1911D9-A524-4855-9645-F77473E0F2EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{406027D9-5E67-4950-861E-1F114E2BD466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406027D9-5E67-4950-861E-1F114E2BD466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406027D9-5E67-4950-861E-1F114E2BD466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406027D9-5E67-4950-861E-1F114E2BD466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1911D9-A524-4855-9645-F77473E0F2EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1911D9-A524-4855-9645-F77473E0F2EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1911D9-A524-4855-9645-F77473E0F2EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1911D9-A524-4855-9645-F77473E0F2EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B40A3A30-3E59-4C61-9688-1E9A61DD8560}
+	EndGlobalSection
+EndGlobal
