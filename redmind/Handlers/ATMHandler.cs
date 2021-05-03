@@ -10,13 +10,6 @@ namespace RedmindATM
     {
         internal readonly Dictionary<Bill, int> availableCashForWithdrawal;
 
-        //The parameterless constructor only exists because I don't yet know how to use mocking libraries for testing
-        public ATMHandler()
-        {
-            var atm = new ATM(new BillsForTestingPurposes());
-            availableCashForWithdrawal = atm.AvailableCash;
-        }
-
         public ATMHandler(IATM atm)
         {
             availableCashForWithdrawal = atm.AvailableCash;

@@ -4,7 +4,8 @@ using System;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("RedmindATM.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")] // Needed for Moq
+[assembly: InternalsVisibleTo("RedmindATM.Tests")]         // Needed for tests
 namespace RedmindATM
 {
     class Program

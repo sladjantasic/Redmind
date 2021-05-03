@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Xunit;
+using Moq;
 
 namespace RedmindATM.Tests
 {
@@ -11,8 +12,24 @@ namespace RedmindATM.Tests
         
         public ATMUnitTests()
         {
-            atmHandler = new ATMHandler();
+
+            var AvailableBills = new Dictionary<Bill, int>()
+            {
+                { Bill.Thousand, 2 },
+                { Bill.FiveHundreds, 3 },
+                { Bill.Hundred, 5 },
+            };
+
+            var mockedBills = new Mock<IBillsForATM>();
+            mockedBills.Setup(x => x.AvailableBills).Returns(AvailableBills);
+
+            var mockedATM = new Mock<IATM>();
+            mockedATM.Setup(x => x.AvailableCash).Returns(mockedBills.Object.AvailableBills);
+
+            atmHandler = new ATMHandler(mockedATM.Object);
             cash = atmHandler.availableCashForWithdrawal;
+
+
         }
 
         [Fact]
