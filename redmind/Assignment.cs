@@ -7,6 +7,8 @@ namespace RedmindATM
     {
         private readonly IConfiguration config;
         private readonly IATMHandler atmHandler;
+        private readonly string[] withdrawals = new[] {"Withdrawals:First", "Withdrawals:Second", "Withdrawals:Third", "Withdrawals:Fourth",
+                                                       "Withdrawals:Fifth", "Withdrawals:Sixth", "Withdrawals:Seventh"};
 
         public Assignment(IConfiguration configuration, IATMHandler atmHandler)
         {
@@ -16,34 +18,12 @@ namespace RedmindATM
 
         internal void Run()
         {
-            PrintCurrentBalance();
-            PrintWithdrawalAttemptAmount("Withdrawals:First");
-            DoTransaction("Withdrawals:First");
-
-            PrintCurrentBalance();
-            PrintWithdrawalAttemptAmount("Withdrawals:Second");
-            DoTransaction("Withdrawals:Second");
-
-            PrintCurrentBalance();
-            PrintWithdrawalAttemptAmount("Withdrawals:Third");
-            DoTransaction("Withdrawals:Third");
-
-            PrintCurrentBalance();
-            PrintWithdrawalAttemptAmount("Withdrawals:Fourth");
-            DoTransaction("Withdrawals:Fourth");
-
-            PrintCurrentBalance();
-            PrintWithdrawalAttemptAmount("Withdrawals:Fifth");
-            DoTransaction("Withdrawals:Fifth");
-
-            PrintCurrentBalance();
-            PrintWithdrawalAttemptAmount("Withdrawals:Sixth");
-            DoTransaction("Withdrawals:Sixth");
-
-            PrintCurrentBalance();
-            PrintWithdrawalAttemptAmount("Withdrawals:Seventh");
-            DoTransaction("Withdrawals:Seventh");
-
+            foreach (var withdrawal in withdrawals)
+            {
+                PrintCurrentBalance();
+                PrintWithdrawalAttemptAmount(withdrawal);
+                DoTransaction(withdrawal);
+            }
         }
 
         internal void PrintCurrentBalance()
